@@ -17,8 +17,10 @@ const chess=new Chess();
 let players={}
 let currentPlayer="W"
 
-app.set("view engine","ejs")
-app.use(express.static(path.join(__dirname,"public")))
+// index.js
+app.set("views", path.join(__dirname, "views")); // Use absolute path
+app.set("view engine", "ejs");
+app.use(express.static(path.join(__dirname, "public")));
 app.use(userRouter)
 
 io.on("connection",(uniquesocket)=>{
