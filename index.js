@@ -70,3 +70,5 @@ const port = process.env.PORT || 3000;
 server.listen(port, () => {
     console.log(`Server running on http://localhost:${port}`);
 });
+// Add this at the bottom of index.js (formerly app.js)
+module.exports = app;
